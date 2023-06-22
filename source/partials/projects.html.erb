@@ -1,0 +1,25 @@
+<div class="grid grid-rows-4 grid-flow-col gap-4">
+  <div class="col-span-2">
+    <div class="">
+      <div id="">
+        <h2> Projects</h2>
+        <div class="">
+          <% data.projects.each do |project| %>
+            <div class="">
+              <%= image_tag project.image, alt: "project image" %>
+              <div class="">
+                <div class="">
+                  <h2><%= project.name %></h2>
+                  <% link_to project.url, class: 'external-link', target: '_blank' do %>
+                    <i class=""></i>
+                  <% end %>
+                </div>
+                <p><%= project.description %></p>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
